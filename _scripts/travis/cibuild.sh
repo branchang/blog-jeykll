@@ -1,9 +1,9 @@
 #!/bin/bash
 
-POSTS_REPOS=https://${blog-ci}@github.com/branchang/blog-posts.git
+POSTS_REPOS=https://${GH_TOKEN}@github.com/branchang/blog-posts.git
 # META_REPOS=https://${GITHUB_TOKEN}@github.com/branchang/blog-meta.git
 
-GH_DEPLOY=https://${blog-ci}@github.com/branchang/branchang.github.io.git
+GH_DEPLOY=https://${GH_TOKEN}@github.com/branchang/branchang.github.io.git
 
 POSTS_CACHE=../blog-posts
 META_CACHE=../blog-meta
