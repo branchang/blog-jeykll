@@ -75,7 +75,7 @@ deploy() {
   git config --global user.email "travis@travis-ci.org"
   git config --global user.name "Travis-CI"
 
-  # echo "[INFO] TRAVIS_BUILD_DIR=${TRAVIS_BUILD_DIR}"
+  echo "[INFO] TRAVIS_BUILD_DIR=${TRAVIS_BUILD_DIR}"
   echo
   echo "[INFO] \$PWD=$(pwd)"
 
@@ -84,14 +84,21 @@ deploy() {
   fi
 
   git clone --depth=1 $GH_DEPLOY $DEPLOY_CACHE
+  echo "clone done."
 
   rm -rf $DEPLOY_CACHE/*
+  echo "rm cache."
   cp -r _site/* $DEPLOY_CACHE
+  echo "cp done."
 
   cd $DEPLOY_CACHE
+  echo "rm done."
   git add -A
+  echo "add  done."
   git commit -m "Travis-CI automated deployment #${TRAVIS_BUILD_NUMBER} of the framework."
+  echo "commit  done."
   git push $GH_DEPLOY master:master
+  echo "push  done."
 
   echo "[INFO] Push to remote: ${GH_DEPLOY}"
 }
