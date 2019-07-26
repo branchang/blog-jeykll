@@ -1,9 +1,9 @@
 #!/bin/bash
 
-POSTS_REPOS=https://${GITHUB_TOKEN}@github.com/cotes2020/blog-posts.git
-META_REPOS=https://${GITHUB_TOKEN}@github.com/cotes2020/blog-meta.git
+POSTS_REPOS=https://${blog_ci}@github.com/branchang/blog-posts.git
+# META_REPOS=https://${GITHUB_TOKEN}@github.com/branchang/blog-meta.git
 
-GH_DEPLOY=https://${GITHUB_TOKEN}@github.com/cotes2020/cotes2020.github.io.git
+GH_DEPLOY=https://${blog_ci}@github.com/branchang/branchang.github.io.git
 
 POSTS_CACHE=../blog-posts
 META_CACHE=../blog-meta
@@ -28,9 +28,9 @@ init() {
     rm -rf ${POSTS_CACHE}
   fi
 
-  if [ -d ${META_CACHE} ]; then
-    rm -rf ${META_CACHE}
-  fi
+  # if [ -d ${META_CACHE} ]; then
+  #  rm -rf ${META_CACHE}
+  # fi
 }
 
 
@@ -54,9 +54,9 @@ combine() {
   cp -a ./* ${POSTS_CACHE}
   echo "[INFO] Combined posts."
 
-  git clone --depth=1 ${META_REPOS} ${META_CACHE}
-  cp -a ${META_CACHE}/* ${POSTS_CACHE}
-  rm -rf ${META_CACHE}
+  # git clone --depth=1 ${META_REPOS} ${META_CACHE}
+  # cp -a ${META_CACHE}/* ${POSTS_CACHE}
+  # rm -rf ${META_CACHE}
   echo "[INFO] Combined meta-data."
 }
 
