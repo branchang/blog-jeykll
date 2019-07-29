@@ -5,11 +5,6 @@ paginate: 10
 markdown: kramdown
 kramdown:
   input: GFM
-  highlighter: rouge
-  syntax_highlighter_opts:
-      block:
-          line_numbers: true
-
 highlighter: rouge
 permalink: /posts/:title/
 
