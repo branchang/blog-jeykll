@@ -42,8 +42,8 @@ combine() {
     "_posts"
     "categories"
     "tags"
-    "norobots"
-    "assets/img/sample")
+    "norobots")
+    # "assets/img/sample")
 
   for i in "${!TEMPLATE[@]}"
   do

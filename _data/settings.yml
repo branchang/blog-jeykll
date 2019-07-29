@@ -1,6 +1,6 @@
-title: 'The Site Name'
-slogan: "The slogan to your site."
-description: "The site description." # RSS feed
+title: "ZHR'S Blog"
+slogan: "Learn, Think, Try"
+description: "ZHR Blog." # RSS feed
 logo: "/assets/img/sample/ant.png"
 
 comments: true  # ture - enable, false - disable
