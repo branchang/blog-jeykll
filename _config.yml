@@ -7,6 +7,7 @@ kramdown:
   input: GFM
 highlighter: rouge
 permalink: /posts/:title/
+timezone: Asia/Shanghai
 
 defaults:
   -
